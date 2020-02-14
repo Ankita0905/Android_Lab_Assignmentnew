@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/maptype1"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/normal_map"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="top"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:src="@drawable/normal">
+
+            </androidx.appcompat.widget.AppCompatImageButton>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Normal"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/maptype3"
+            android:orientation="vertical"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/hybrid_map"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="top"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:src="@drawable/hybrid">
+
+            </androidx.appcompat.widget.AppCompatImageButton>
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Hybrid"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/maptype4"
+            android:orientation="vertical"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/satellite_map"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="top"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:src="@drawable/satelite">
+
+            </androidx.appcompat.widget.AppCompatImageButton>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Satellite"
+                android:gravity="center"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/maptype2"
+            android:orientation="vertical"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/terrain_map"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="top"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:src="@drawable/terain">
+
+            </androidx.appcompat.widget.AppCompatImageButton>
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Terrain"
+                android:gravity="center"/>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.mancj:MaterialSearchBar:master-SNAPSHOT@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/117c52c1ac578a3ee998bf0288552ec8/MaterialSearchBar-master-SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/117c52c1ac578a3ee998bf0288552ec8/MaterialSearchBar-master-SNAPSHOT/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mancj/MaterialSearchBar/master-SNAPSHOT/6d8437e5154eea7147615b82fea495e40ec93035/MaterialSearchBar-master-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mancj/MaterialSearchBar/master-SNAPSHOT/413229d6b0d15125f6bfa31e43406a1c0d1e146b/MaterialSearchBar-master-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

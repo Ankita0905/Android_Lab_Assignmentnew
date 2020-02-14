@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    tools:context=".MapFragment">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="130dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_action_overlay"
+        android:tint="@color/colorPrimaryDark"
+
+        app:fabSize="mini" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rouded_button"
+        android:id="@+id/searchLayout"
+
+        >
+    <fragment android:id="@+id/autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+
+        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+        />
+    </LinearLayout>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:scrollbars="none"
+        >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@android:color/transparent"
+
+        >
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+
+            android:background="#065"
+            android:textColor="#fff"
+            android:layout_marginRight="0.5dp"
+            android:id="@+id/restaurant"
+            android:text="@string/restaurant"
+
+
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:background="#065"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/cafe"
+            android:text="Cafe"
+
+
+            />
+
+        <Button
+            android:id="@+id/museum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+
+            android:background="#065"
+            android:textColor="#fff"
+            android:layout_marginLeft="0.5dp"
+
+            android:text="Museum" />
+
+
+    </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+
+
+</FrameLayout>
