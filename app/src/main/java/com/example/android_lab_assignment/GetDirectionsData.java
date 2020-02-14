@@ -61,13 +61,13 @@ public class GetDirectionsData extends AsyncTask<Object, String, String> {
 
         /*---------------------------------*/
 
-        if (MainActivity.directionRequested) {
+//        if (MainActivity.directionRequested) {
             String[] directionsList;
             DataParser parser = new DataParser();
             directionsList = parser.parseDirections(s);
             Log.d("", "onPostExecute: " + directionsList);
             displayDirections(directionsList);
-        }
+//        }
     }
 
     private void displayDirections(String[] directionsList) {

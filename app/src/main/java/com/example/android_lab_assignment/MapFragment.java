@@ -68,6 +68,7 @@ GoogleMap mMap;
     LocationRequest locationRequest;
 
     double latitude, longitude;
+    LatLng currentLocation;
     double destLat, destLong;
     final int RADIUS = 1500;
     static boolean directionRequest;
@@ -157,10 +158,11 @@ GoogleMap mMap;
 
         View view =inflater.inflate(R.layout.fragment_map, container, false);
 
-        FloatingActionButton floatingActionButton = view.findViewById(R.id.floatingBtn);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+        Button btnmaptype = view.findViewById(R.id.maptype);
+        btnmaptype.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 final BottomSheetDialog mBottomSheetDialog = new BottomSheetDialog(getActivity());
                 View sheetView = getActivity().getLayoutInflater().inflate(R.layout.map_type_sheet, null);
                 mBottomSheetDialog.setContentView(sheetView);
@@ -205,6 +207,8 @@ GoogleMap mMap;
 
             }
         });
+
+
 
         Button res = view.findViewById(R.id.restaurant);
         res.setOnClickListener(new View.OnClickListener() {
@@ -259,6 +263,7 @@ GoogleMap mMap;
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        MainActivity.mMap = mMap;
         mMap.setMapType(mapType );
         mMap.setMyLocationEnabled(true);
         setStoredMarkers();
@@ -278,7 +283,7 @@ GoogleMap mMap;
                 location.setAddress(address);
                 locationDB.daoObjct().insert(location);
 
-                Toast.makeText(getContext(),"Size" +locations.size(),Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getContext(),"Size" +locations.size(),Toast.LENGTH_SHORT).show();
 
                 Toast.makeText(getContext(),address,Toast.LENGTH_SHORT).show();
                 setStoredMarkers();
@@ -299,7 +304,7 @@ GoogleMap mMap;
             LatLng latLng = new LatLng( locations.get( i ).getLatitude(), locations.get( i ).getLongitude() );
             CameraPosition cameraPosition = CameraPosition.builder()
                     .target( latLng )
-                    .zoom( 15 )
+                    .zoom( 10 )
                     .bearing( 0 )
                     .tilt( 45 )
                     .build();
@@ -373,9 +378,10 @@ GoogleMap mMap;
                     latitude = location.getLatitude();
                     longitude = location.getLongitude();
 
+                    currentLocation = userLocation;
                     CameraPosition cameraPosition = CameraPosition.builder()
                             .target( userLocation )
-                            .zoom( 15 )
+                            .zoom( 10 )
                             .bearing( 0 )
                             .tilt( 45 )
                             .build();

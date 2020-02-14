@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Android_Lab_Assignment</string>
-    <string name="api_key">AIzaSyCGNZIaTG3Lj3gj5I6OrIvf9NZMQbz2oeU</string>
-    <string name="api_key_class">AIzaSyD2ktEXAQnHpIkh5TqnJgqEaXwcs1olsmY</string>
-    <string name="api_key_places">AIzaSyCGNZIaTG3Lj3gj5I6OrIvf9NZMQbz2oeU</string>
+<!--    <string name="app_name">Android_Lab_Assignment</string>-->
+<!--    <string name="api_key">AIzaSyCGNZIaTG3Lj3gj5I6OrIvf9NZMQbz2oeU</string>-->
+<!--    <string name="api_key_class">AIzaSyD2ktEXAQnHpIkh5TqnJgqEaXwcs1olsmY</string>-->
+<!--    <string name="api_key_places">AIzaSyCGNZIaTG3Lj3gj5I6OrIvf9NZMQbz2oeU</string>-->
+    <string name="api_key">AIzaSyCf1G-6T6DWUmYvA8bq21rjc8U7x2SGPDw</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

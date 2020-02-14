@@ -39,13 +39,14 @@ public class MainActivity extends AppCompatActivity  {
 
     private final int REQUEST_CODE = 1;
 
-    GoogleMap mMap;
+    static GoogleMap mMap;
     private FusedLocationProviderClient fusedLocationProviderClient;
     LocationCallback locationCallback;
     LocationRequest locationRequest;
 
     double latitude, longitude;
     double dest_lat, dest_lng;
+    LatLng currentLocation;
 
     final int RADIUS = 1500;
 
@@ -56,6 +57,12 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        latitude = 43.7780;
+        longitude = -79.3442;
+
+        dest_lat = 43.7733;
+        dest_lng = -79.3359;
 
 
 //        dest_lat = latLng.latitude;
@@ -83,7 +90,8 @@ public class MainActivity extends AppCompatActivity  {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Object[] dataTransfer;
+//                Object[] dataTransfer;
+                Object[] dataTransfer = new Object[2];
                 switch (item.getItemId())
                 {
                     case R.id.action_map:
@@ -98,19 +106,15 @@ public class MainActivity extends AppCompatActivity  {
                         break;
 
                     case R.id.action_direction:
-                        dataTransfer = new Object[3];
+                        dataTransfer = new Object[4];
                         url = getDirectionUrl();
                         dataTransfer[0] = mMap;
                         dataTransfer[1] = url;
-                        dataTransfer[2] = new LatLng(dest_lat, dest_lng);
-
+                        //dataTransfer[2] = customMarker;
+                        dataTransfer[3] = new LatLng(currentLocation.latitude,currentLocation.longitude);
                         GetDirectionsData getDirectionsData = new GetDirectionsData();
                         // execute asynchronously
                         getDirectionsData.execute(dataTransfer);
-//                        if (view.getId() == R.id.go_btn)
-//                            directionRequested = false;
-//                        else
-//                            directionRequested = true;
 
 
                         Toast.makeText(MainActivity.this,"direction",Toast.LENGTH_SHORT).show();
@@ -128,7 +132,7 @@ public class MainActivity extends AppCompatActivity  {
         StringBuilder googleDirectionUrl = new StringBuilder("https://maps.googleapis.com/maps/api/directions/json?");
         googleDirectionUrl.append("origin="+latitude+","+longitude);
         googleDirectionUrl.append("&destination="+dest_lat+","+dest_lng);
-        googleDirectionUrl.append("&key="+getString(R.string.api_key_places));
+        googleDirectionUrl.append("&key="+getString(R.string.api_key));
         Log.d("", "getDirectionUrl: "+googleDirectionUrl);
         return googleDirectionUrl.toString();
     }

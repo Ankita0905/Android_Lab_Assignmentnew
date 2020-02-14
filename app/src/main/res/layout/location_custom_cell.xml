@@ -48,9 +48,10 @@
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="10dp"
                         android:text="TextView"
+                        android:textColor="@color/colorAccent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
 
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.302" />
 
@@ -63,9 +64,10 @@
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="10dp"
                         android:text="TextView"
+                        android:textColor="@color/colorAccent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
 
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.302" />
 
